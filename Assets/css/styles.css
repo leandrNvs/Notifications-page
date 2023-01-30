@@ -1,0 +1,152 @@
+@font-face {
+  font-family: jakarta-500;
+  src: url('../fonts/static/PlusJakartaSans-Medium.ttf');
+}
+
+@font-face {
+  font-family: jakarta-800;
+  src: url('../fonts/static/PlusJakartaSans-ExtraBold.ttf');
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   outline: none;
+   text-decoration: none;
+   list-style-type: none;
+   box-sizing: border-box;
+   font-family: jakarta-500, sans-serif;
+}
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+.main {
+  padding: 0 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.header h1 {
+  font-size: 1.3rem;
+}
+
+.header .badge {
+  background-color: var(--Blue);
+  padding: 0 .5rem;
+  color: var(--White);
+  font-weight: 600;
+  margin-right: auto;
+  border-radius: 3px;
+}
+
+.header button {
+  font-size: .825rem;
+  border: 0;
+  background: transparent;
+  color: var(--Dark-grayish-blue);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.header button:hover {
+  color: var(--Blue);
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: .8rem;
+  gap: .8rem;
+  font-size: 0.8rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.notification > div:not(.message) {
+  flex: 1;
+}
+
+.notification p {
+  margin-bottom: .1rem;
+}
+
+.notification img:not(.profile) {
+  width: 40px;
+  margin-left: 1rem;
+}
+
+.name {
+  font-family: jakarta-800;
+  color: var(--Very-dark-blue);
+  margin-right: .3rem;
+  cursor: pointer;
+}
+
+.name:hover {
+  color: var(--Blue);
+}
+
+.unread {
+  background-color: var(--Very-light-grayish-blue);
+  border-radius: 8px;
+}
+
+.post {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.unread span.circle {
+  height: 7px;
+  width: 7px;
+  background-color: var(--Red);
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: .1rem;
+  margin-left: .3rem;
+}
+
+.group {
+  color: var(--Blue);
+  font-family: jakarta-800;
+  cursor: pointer;
+}
+
+.profile {
+  width: 40px;
+}
+
+.message {
+  margin-left: calc(40px + .8rem);
+  border: thin solid var(--Light-grayish-blue-1);
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message:hover {
+  background-color: var(--Light-grayish-blue-2);
+}
