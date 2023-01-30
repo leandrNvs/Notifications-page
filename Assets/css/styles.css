@@ -30,10 +30,19 @@
   --Very-dark-blue: hsl(224, 21%, 14%);
 }
 
+body {
+  background-color: var(--Light-grayish-blue-2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main {
+  background-color: var(--White);
   padding: 0 1rem;
   max-width: 600px;
-  margin: 0 auto;
+  border-radius: 8px;
 }
 
 .header {
